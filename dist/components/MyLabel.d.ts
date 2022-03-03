@@ -1,5 +1,5 @@
-import  './mylabel.css';
-
+/// <reference types="react" />
+import './mylabel.css';
 export interface MyLabelProps {
     /**
      * Descripción que se va a colocar como etiqueta
@@ -12,7 +12,7 @@ export interface MyLabelProps {
     /**
      * Si quiere todo el texto de la etiqueta en mayúsculas
      */
-    allCaps: boolean,
+    allCaps: boolean;
     /**
      * Si quiere cambiar los colores de la etiqueta
      */
@@ -24,19 +24,9 @@ export interface MyLabelProps {
     /**
      * Si quiere cambiar el color de fondo de la fuente
      */
-     backgroundColor?: string;
+    backgroundColor?: string;
 }
-
 /**
  * Label UI component para mostrar una etiqueta acompañando al lado de otro componente
  */
-export const MyLabel = ( { label='No label', size='normal', color='primary', allCaps=false, fontColor, backgroundColor }: MyLabelProps ) => {
-  return (
-    <span 
-        className={ `label ${size} text-${color}`} 
-        style={ {color: fontColor, backgroundColor}}
-    >
-        { (allCaps)? label.toUpperCase(): label }
-    </span>
-  )
-}
+export declare const MyLabel: ({ label, size, color, allCaps, fontColor, backgroundColor }: MyLabelProps) => JSX.Element;

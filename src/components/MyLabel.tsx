@@ -36,7 +36,7 @@ export const MyLabel = ( { label='No label', size='normal', color='primary', all
         className={ `label ${size} text-${color}`}
         style={ {color: fontColor, backgroundColor}}
     >
-        { (allCaps)? label.toUpperCase(): label.toLowerCase() }
+        { (allCaps)? label.toUpperCase(): label }
     </span>
   )
 }

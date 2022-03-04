@@ -33,10 +33,10 @@ export interface MyLabelProps {
 export const MyLabel = ( { label='No label', size='normal', color='primary', allCaps=false, fontColor, backgroundColor }: MyLabelProps ) => {
   return (
     <span 
-        className={ `label ${size} text-${color}`} 
+        className={ `label ${size} text-${color}`}
         style={ {color: fontColor, backgroundColor}}
     >
-        { (allCaps)? label.toUpperCase(): label }
+        { (allCaps)? label.toUpperCase(): label.toLowerCase() }
     </span>
   )
 }
